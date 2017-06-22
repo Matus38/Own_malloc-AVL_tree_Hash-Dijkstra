@@ -82,11 +82,11 @@ void setHeight(NODE *n){
 	n->height = (l > r) ? l + 1 : r + 1;
 }
 
-/*	A		     B
-     \			/ \
+/*  A		 B
+     \		/ \
       B	  =>   A   C
-	 / \	    \
-	x   C        x
+     / \	\
+    x   C        x
 */
 NODE *leftRotate(NODE *n){
 	NODE *NR = n->right;			
@@ -101,8 +101,8 @@ NODE *leftRotate(NODE *n){
 	return NR;
 }
 
-/*	    C		     B
-	   / 			/ \
+/*	    C		 B
+	   / 		/ \
 	  B  	  =>   A   C
 	 / \	          /
 	A   x            x
